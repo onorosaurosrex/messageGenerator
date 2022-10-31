@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reguetón Lyric Generator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Pompiere&family=Rubik+Dirt&family=Square+Peg&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="resources/css/reset.css" type="txt/css">
+    <!-- CSS STYLE FOR CELLPHONES -->
+    <link rel="stylesheet" media="screen and (orientation: portrait) and (max-aspect-ratio: 800/1351)" href="resources/css/mobile.css">
+    <!-- CSS STYLE FOR DESKTOPS -->
+            <link rel="stylesheet" media="screen and (orientation: landscape) " href="resources/css/desktop.css">
+    <!-- CSS STYLE FOR TABS -->
+            <link rel="stylesheet" media="screen and (orientation: portrait) and (max-aspect-ratio: 1/1) and (min-aspect-ratio: 800/1350)" href="resources/css/tablet.css">
+    
+</head>
+<body>
+    <main>
+        <div id="logo"><img src="/resources/images/generatorlogo.png"></div>
+        <div id="holder">
+        <div id="headlineContainer">
+            <h1 id="lyrics">Click para crear la letra de tu reguetón</h1>
+        </div>
+        <div id="buttonContainer">
+            <button onclick="generate()">Generar!            
+            </button>
+        </div>
+    </div>
+            <script>
+                const generate = () => {
+                let d = new Date();
+                let first = ["Princesa ","Preciosa ","Bebé ","Bebita ","Niñita ","Diablita ","Mami ","Mamita ","Reina ","Preciosa Amazona ","Hermosa Atrevida ","Diabla de mi infierno ","Diabla de mi cielo ","Corazón ","Amor ","Corazón de mi vida "];
+                let second = ["yo quiero ","yo puedo ","deseo ","yo vengo a ","vengo para ","voy a ","solo quiero ","solo deseo ","yo voy a ","he esperado tanto para ","preparate porque hoy voy a "];
+                let third = ["encenderte ","amarte ","besarte ","ligar ","jugar ","retozar ","bailar ","perrearte ","despertarte ","activarte "];
+                let fourth = ["suave ","suavemente ","lento ","lentamente ","rápido ","tiernamente ","fuerte ","duro ","sutilmente ","violentamente "];
+                let fifth = ["hasta que salga el sol ","hasta el amanecer ","toda la noche ","todo el día ","todas las noches ","todos los días ","por los siglos de los siglos "];
+                let sixth = ["sin anestecia.","sin compromiso.","sin complicarnos.","y seremos solo amigos.","cara a cara.","sin miedo.","no perdamos más tiempo."];
+
+                let phrase = "";
+                let group=[first,second,third,fourth,fifth,sixth];
+
+                for (let i = 0; i <6; i++){
+                    phrase += group[i][Math.floor(Math.random() * group[i].length)]
+                }
+                let h = document.getElementsByTagName("h1")[0];
+                document.getElementsByTagName("h1")[0].innerText = phrase;
+                /*return console.log(h.innerText);*/
+                }
+            </script>
+
+    </main>
+
+    <!--/*let first = ["Princesa ","Preciosa ","Bebé ","Bebita ","Niñita ","Diablita ","Mami ","Mamita ","Reina ","Preciosa Amazona ","Hermosa Atrevida ","Diabla de mi infierno ","Diabla de mi cielo ","Corazón ","Amor ","Corazón de mi vida "];
+                let second = ["yo quiero ","yo puedo ","deseo ","yo vengo a ","vengo para ","voy a ","solo quiero ","solo deseo ","yo voy a ","he esperado tanto para ","preparate porque hoy voy a "];
+                let third = ["encenderte ","amarte ","besarte ","ligar ","jugar ","retozar ","bailar ","muñequar ","perrear ","despertarte ","activarte "];
+                let fourth = ["suave ","suavemente ","lento ","lentamente ","rápido ","tiernamente ","fuerte ","duro ","sutilmente ","violentamente "];
+                let fifth = ["hasta que salga el sol ","hasta el amanecer ","toda la noche ","todo el día ","todas las noches ","todos los días ","por los siglos de los siglos "];
+                let sixth = ["sin anestecia.","sin compromiso.","sin complicarnos.","y seremos solo amigos.","cara a cara.","sin miedo.","no perdamos más tiempo."];
+
+                let phrase = "";
+                let group=[first,second,third,fourth,fifth,sixth];
+
+                for (let i = 0; i <6; i++){
+                    phrase += group[i][Math.floor(Math.random() * group[i].length)]
+                }
+                /document.getElementByTagName("h1")[0];*/-->
+</body>
+</html>
